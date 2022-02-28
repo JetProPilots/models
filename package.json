@@ -1,0 +1,11 @@
+{
+  "name": "@jetpropilots/models",
+  "version": "1.0.2",
+  "description": "mongoose models for jetpro apps",
+  "scripts": {},
+  "author": "wickdninja",
+  "license": "ISC",
+  "files": [
+    "./*.js"
+  ]
+}
