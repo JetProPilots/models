@@ -1,0 +1,28 @@
+import { Employee } from "./Employee";
+export declare type UserModel = {
+    gid: string;
+    token: string;
+    email: string;
+    name: string;
+    profile: any;
+    role: string;
+    type: string;
+    client: string;
+    lastLogin: Date;
+    lastDevice: string;
+    phone: string;
+    textEmail: string;
+    prefEmail: string;
+    rate: number;
+    billerRate: number;
+    travelRate: number;
+    travelBillRate: number;
+    medicalDate: Date;
+    medicalClass: number;
+    hasLoggedIn: boolean;
+    payStubs: any[];
+    defaults: any;
+    employeeId: string;
+    kronosKey: number;
+    employee: Employee;
+};

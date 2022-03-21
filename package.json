@@ -2,10 +2,19 @@
   "name": "@jetpropilots/models",
   "version": "1.0.2",
   "description": "mongoose models for jetpro apps",
-  "scripts": {},
+  "scripts": {
+    "build": "tsc"
+  },
   "author": "wickdninja",
   "license": "ISC",
+  "dependencies": {
+    "@tsconfig/node16": "^1.0.2",
+    "mongoose": "^6.2.7"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  },
   "files": [
-    "./*.js"
+    "/dist/**/*"
   ]
 }
