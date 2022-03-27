@@ -1,10 +1,8 @@
 {
   "name": "@jetpropilots/models",
-  "version": "5.0.10",
+  "version": "6.0.0",
   "description": "mongoose models for jetpro apps",
   "scripts": {
-    "build": "tsc",
-    "preversion": "npm run build",
     "predeploy": "npm version patch --force",
     "deploy": "npm publish"
   },
