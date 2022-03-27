@@ -41,4 +41,4 @@ const schema = new Schema<Category>({
 
 const CategoryModel = model<Category>('Category', schema)
 
-export default CategoryModel
+export { CategoryModel }

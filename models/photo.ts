@@ -36,4 +36,4 @@ schema.path('location').index({ type: '2dsphere' })
 schema.path('location').default([0, 0])
 const PhotoModel = model<Photo>('Photo', schema)
 
-export default PhotoModel
+export { PhotoModel }

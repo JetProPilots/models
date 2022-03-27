@@ -97,4 +97,4 @@ const schema = new Schema({
 
 const TripModel = model('Trip', schema)
 
-export default TripModel
+export { TripModel }

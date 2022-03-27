@@ -48,4 +48,4 @@ const schema = new Schema<MapMarkerDesign>({
 
 const MapMarkerDesignModel = model<MapMarkerDesign>('MapMarkerDesign', schema)
 
-export default MapMarkerDesignModel
+export { MapMarkerDesignModel }

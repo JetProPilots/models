@@ -11,4 +11,4 @@ const schema = new Schema<Client>({
 // create the model for clients and expose it to our app
 const ClientModel = model<Client>('Client', schema)
 
-export default ClientModel
+export { ClientModel }

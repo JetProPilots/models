@@ -54,4 +54,4 @@ const schema = new Schema<Expense>({
 
 const ExpenseModel = model<Expense>('Expense', schema)
 
-export default ExpenseModel
+export { ExpenseModel }

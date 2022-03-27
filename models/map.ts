@@ -45,4 +45,4 @@ const schema = new Schema<Map>({
 
 const MapModel = model<Map>('Map', schema)
 
-export default MapModel
+export { MapModel }

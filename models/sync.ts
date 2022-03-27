@@ -31,4 +31,4 @@ const schema = new Schema<Sync>({
 
 const SyncModel = model<Sync>('Sync', schema)
 
-export default SyncModel
+export { SyncModel }

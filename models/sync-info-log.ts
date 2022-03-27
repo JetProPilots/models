@@ -11,4 +11,4 @@ const schema = new Schema<SyncInfoLog>({
 schema.index({ syncId: 1, ts: 1 })
 const SyncInfoLogModel = model<SyncInfoLog>('SyncInfoLog', schema)
 
-export default SyncInfoLogModel
+export { SyncInfoLogModel }

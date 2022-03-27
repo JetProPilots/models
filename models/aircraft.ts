@@ -17,4 +17,4 @@ const schema = new Schema<Aircraft>({
 })
 
 const AircraftModel = model<Aircraft>('Aircraft', schema)
-export default AircraftModel
+export { AircraftModel }

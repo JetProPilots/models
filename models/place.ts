@@ -24,4 +24,4 @@ schema.path('location').index({ type: '2dsphere' })
 
 const PlaceModel = model<Place>('Place', schema)
 
-export default PlaceModel
+export { PlaceModel }
