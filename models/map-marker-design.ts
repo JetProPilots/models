@@ -1,5 +1,5 @@
 import { model, Schema } from 'mongoose'
-import { MapMarkerDesign } from '../../interfaces/map-marker-design'
+import { MapMarkerDesign } from '../interfaces/map-marker-design'
 
 const schema = new Schema<MapMarkerDesign>({
   active: {

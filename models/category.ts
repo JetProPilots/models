@@ -1,5 +1,5 @@
 import { model, Schema } from 'mongoose'
-import { Category } from '../../interfaces/category'
+import { Category } from '../interfaces/category'
 
 const schema = new Schema<Category>({
   icon: {

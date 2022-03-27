@@ -1,6 +1,6 @@
 {
   "name": "@jetpropilots/models",
-  "version": "10.0.0",
+  "version": "11.0.0",
   "description": "mongoose models for jetpro apps",
   "scripts": {
     "predeploy": "npm version patch --force",
