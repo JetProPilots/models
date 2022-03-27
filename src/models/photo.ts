@@ -1,5 +1,5 @@
 import { model, Schema } from 'mongoose'
-import { Photo } from '../interfaces/Photo'
+import { Photo } from '../interfaces/photo'
 const schema = new Schema<Photo>({
   name: {
     type: String,

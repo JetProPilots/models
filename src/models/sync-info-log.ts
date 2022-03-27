@@ -1,4 +1,4 @@
-import { SyncInfoLog } from '../interfaces/SyncInfoLog'
+import { SyncInfoLog } from '../interfaces/sync-info-log'
 import { model, Schema } from 'mongoose'
 
 const schema = new Schema<SyncInfoLog>({

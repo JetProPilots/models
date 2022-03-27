@@ -6,6 +6,6 @@
 /// <reference types="mongoose/types/mongooseoptions" />
 /// <reference types="mongoose/types/schemaoptions" />
 /// <reference types="mongoose" />
-import { SyncErrorLog } from '../interfaces/SyncErrorLog';
+import { SyncErrorLog } from '../interfaces/sync-error-log';
 declare const SyncErrorLogModel: import("mongoose").Model<SyncErrorLog, {}, {}, {}>;
 export { SyncErrorLogModel };

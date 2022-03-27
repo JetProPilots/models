@@ -1,6 +1,6 @@
 import { model, Schema } from 'mongoose'
-import { Sync } from '../interfaces/Sync'
-import { SYNC_STATUS } from '../interfaces/SyncStatus'
+import { Sync } from '../interfaces/sync'
+import { SYNC_STATUS } from '../interfaces/sync-status'
 
 const schema = new Schema<Sync>({
   status: {

@@ -6,6 +6,6 @@
 /// <reference types="mongoose/types/mongooseoptions" />
 /// <reference types="mongoose/types/schemaoptions" />
 /// <reference types="mongoose" />
-import { Map } from '../interfaces/Map';
+import { Map } from '../interfaces/map';
 declare const MapModel: import("mongoose").Model<Map, {}, {}, {}>;
 export { MapModel };

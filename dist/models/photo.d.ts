@@ -6,6 +6,6 @@
 /// <reference types="mongoose/types/mongooseoptions" />
 /// <reference types="mongoose/types/schemaoptions" />
 /// <reference types="mongoose" />
-import { Photo } from '../interfaces/Photo';
+import { Photo } from '../interfaces/photo';
 declare const PhotoModel: import("mongoose").Model<Photo, {}, {}, {}>;
 export { PhotoModel };

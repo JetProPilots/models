@@ -1,9 +1,9 @@
-import { Address } from './Address'
-import { Dates } from './Dates'
-import { Ein } from './Ein'
-import { FirstScreen } from './FirstScreen'
-import { Links } from './Links'
-import { NationalIDNumber } from './NationalIDNumber'
+import { Address } from './address'
+import { Dates } from './dates'
+import { Ein } from './ein'
+import { FirstScreen } from './first-screen'
+import { Links } from './links'
+import { NationalIDNumber } from './national-id-number'
 
 export interface Employee {
   id: number

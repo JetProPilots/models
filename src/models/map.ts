@@ -1,5 +1,5 @@
 import { model, Schema } from 'mongoose'
-import { Map } from '../interfaces/Map'
+import { Map } from '../interfaces/map'
 
 const schema = new Schema<Map>({
   useForMarkers: {

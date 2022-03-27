@@ -6,6 +6,6 @@
 /// <reference types="mongoose/types/mongooseoptions" />
 /// <reference types="mongoose/types/schemaoptions" />
 /// <reference types="mongoose" />
-import { Sync } from '../interfaces/Sync';
+import { Sync } from '../interfaces/sync';
 declare const SyncModel: import("mongoose").Model<Sync, {}, {}, {}>;
 export { SyncModel };

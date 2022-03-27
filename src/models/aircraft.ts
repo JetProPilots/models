@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose'
-import { Aircraft } from '../interfaces/Aircraft'
+import { Aircraft } from '../interfaces/aircraft'
 
 const schema = new Schema<Aircraft>({
   make: {

@@ -6,6 +6,6 @@
 /// <reference types="mongoose/types/mongooseoptions" />
 /// <reference types="mongoose/types/schemaoptions" />
 /// <reference types="mongoose" />
-import { Category } from '../interfaces/Category';
+import { Category } from '../interfaces/category';
 declare const CategoryModel: import("mongoose").Model<Category, {}, {}, {}>;
 export { CategoryModel };

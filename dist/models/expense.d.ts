@@ -6,6 +6,6 @@
 /// <reference types="mongoose/types/mongooseoptions" />
 /// <reference types="mongoose/types/schemaoptions" />
 /// <reference types="mongoose" />
-import { Expense } from '../interfaces/Expense';
+import { Expense } from '../interfaces/expense';
 declare const ExpenseModel: import("mongoose").Model<Expense, {}, {}, {}>;
 export { ExpenseModel };

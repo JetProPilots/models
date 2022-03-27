@@ -6,6 +6,6 @@
 /// <reference types="mongoose/types/mongooseoptions" />
 /// <reference types="mongoose/types/schemaoptions" />
 /// <reference types="mongoose" />
-import { Place } from '../interfaces/Place';
+import { Place } from '../interfaces/place';
 declare const PlaceModel: import("mongoose").Model<Place, {}, {}, {}>;
 export { PlaceModel };

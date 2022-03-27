@@ -6,6 +6,6 @@
 /// <reference types="mongoose/types/mongooseoptions" />
 /// <reference types="mongoose/types/schemaoptions" />
 /// <reference types="mongoose" />
-import { Client } from '../interfaces/Client';
+import { Client } from '../interfaces/client';
 declare const ClientModel: import("mongoose").Model<Client, {}, {}, {}>;
 export { ClientModel };

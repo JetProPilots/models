@@ -6,6 +6,6 @@
 /// <reference types="mongoose/types/mongooseoptions" />
 /// <reference types="mongoose/types/schemaoptions" />
 /// <reference types="mongoose" />
-import { MapMarkerDesign } from '../interfaces/MapMarkerDesign';
+import { MapMarkerDesign } from '../interfaces/map-marker-design';
 declare const MapMarkerDesignModel: import("mongoose").Model<MapMarkerDesign, {}, {}, {}>;
 export { MapMarkerDesignModel };

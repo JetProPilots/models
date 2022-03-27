@@ -6,6 +6,6 @@
 /// <reference types="mongoose/types/mongooseoptions" />
 /// <reference types="mongoose/types/schemaoptions" />
 /// <reference types="mongoose" />
-import { Aircraft } from '../interfaces/Aircraft';
+import { Aircraft } from '../interfaces/aircraft';
 declare const AircraftModel: import("mongoose").Model<Aircraft, {}, {}, {}>;
 export { AircraftModel };

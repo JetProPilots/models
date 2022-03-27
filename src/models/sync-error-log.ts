@@ -1,4 +1,4 @@
-import { SyncErrorLog } from '../interfaces/SyncErrorLog'
+import { SyncErrorLog } from '../interfaces/sync-error-log'
 import { model, Schema } from 'mongoose'
 
 const schema = new Schema<SyncErrorLog>({
