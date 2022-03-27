@@ -1,9 +1,12 @@
 {
   "name": "@jetpropilots/models",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "mongoose models for jetpro apps",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "preversion": "npm run build",
+    "predeploy": "npm version patch --force",
+    "deploy": "npm run build && npm publish"
   },
   "author": "wickdninja",
   "license": "ISC",
