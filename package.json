@@ -1,6 +1,6 @@
 {
   "name": "@jetpropilots/models",
-  "version": "3.0.1",
+  "version": "4.0.1",
   "description": "mongoose models for jetpro apps",
   "scripts": {
     "build": "tsc",

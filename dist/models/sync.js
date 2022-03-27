@@ -1,12 +1,8 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
-const SyncStatus_1 = require("../types/SyncStatus");
-const Schema = mongoose_1.default.Schema;
-const Sync = mongoose_1.default.model("Sync", new Schema({
+const mongoose_1 = require("mongoose");
+const SyncStatus_1 = require("../interfaces/SyncStatus");
+const schema = new mongoose_1.Schema({
     status: {
         type: String,
         required: true,
@@ -20,7 +16,7 @@ const Sync = mongoose_1.default.model("Sync", new Schema({
         ],
         default: SyncStatus_1.SYNC_STATUS.READY,
     },
-    progress: { type: String, default: "0" },
+    progress: { type: String, default: '0' },
     task: { type: Number, default: 0 },
     totalTasks: { type: Number, default: 0 },
     employees: { type: Number, default: 0 },
@@ -31,5 +27,6 @@ const Sync = mongoose_1.default.model("Sync", new Schema({
     end: { type: Date },
     resumed: { type: [Date], default: [] },
     execution: { type: String },
-}));
-exports.default = Sync;
+});
+const SyncModel = (0, mongoose_1.model)('Sync', schema);
+exports.default = SyncModel;

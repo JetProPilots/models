@@ -1,11 +1,7 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
-const Schema = mongoose_1.default.Schema;
-const Map = mongoose_1.default.model("Map", new Schema({
+const mongoose_1 = require("mongoose");
+const schema = new mongoose_1.Schema({
     useForMarkers: {
         type: Boolean,
         default: false,
@@ -45,5 +41,6 @@ const Map = mongoose_1.default.model("Map", new Schema({
     show_user_location: String,
     default_to: String,
     other_settings: String,
-}));
-exports.default = Map;
+});
+const MapModel = (0, mongoose_1.model)('Map', schema);
+exports.default = MapModel;

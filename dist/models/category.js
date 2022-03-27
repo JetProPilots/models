@@ -1,11 +1,7 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
-const Schema = mongoose_1.default.Schema;
-const Category = mongoose_1.default.model('Category', new Schema({
+const mongoose_1 = require("mongoose");
+const schema = new mongoose_1.Schema({
     icon: {
         url: {
             type: String,
@@ -40,5 +36,6 @@ const Category = mongoose_1.default.model('Category', new Schema({
     image: {
         type: String,
     },
-}));
-exports.default = Category;
+});
+const CategoryModel = (0, mongoose_1.model)('Category', schema);
+exports.default = CategoryModel;

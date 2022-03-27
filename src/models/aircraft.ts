@@ -1,21 +1,20 @@
-import mongoose from 'mongoose'
-const Schema = mongoose.Schema
+import { Schema, model } from 'mongoose'
+import { Aircraft } from '../interfaces/Aircraft'
 
-const Aircraft = mongoose.model(
-  'Aircraft',
-  new Schema({
-    make: {
-      type: String,
-      required: true,
-    },
-    type: {
-      type: String,
-      required: true,
-    },
-    model: {
-      type: String,
-      required: true,
-    },
-  })
-)
-export default Aircraft
+const schema = new Schema<Aircraft>({
+  make: {
+    type: String,
+    required: true,
+  },
+  type: {
+    type: String,
+    required: true,
+  },
+  model: {
+    type: String,
+    required: true,
+  },
+})
+
+const AircraftModel = model<Aircraft>('Aircraft', schema)
+export default AircraftModel

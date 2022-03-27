@@ -1,3 +1,11 @@
-import mongoose from "mongoose";
-declare const Map: mongoose.Model<any, {}, {}, {}>;
-export default Map;
+/// <reference types="mongoose/types/pipelinestage" />
+/// <reference types="mongoose/types/connection" />
+/// <reference types="mongoose/types/cursor" />
+/// <reference types="mongoose/types/document" />
+/// <reference types="mongoose/types/error" />
+/// <reference types="mongoose/types/mongooseoptions" />
+/// <reference types="mongoose/types/schemaoptions" />
+/// <reference types="mongoose" />
+import { Map } from '../interfaces/Map';
+declare const MapModel: import("mongoose").Model<Map, {}, {}, {}>;
+export default MapModel;

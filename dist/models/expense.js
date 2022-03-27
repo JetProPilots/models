@@ -1,11 +1,7 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
-const Schema = mongoose_1.default.Schema;
-const Expense = mongoose_1.default.model("Expense", new Schema({
+const mongoose_1 = require("mongoose");
+const schema = new mongoose_1.Schema({
     name: {
         type: String,
         required: true,
@@ -26,33 +22,34 @@ const Expense = mongoose_1.default.model("Expense", new Schema({
         type: String,
         required: true,
         enum: [
-            "Airline",
-            "Baggage",
-            "Car",
-            "Catering",
-            "Fee",
-            "Hangar Supplies",
-            "Hotel",
-            "Meal",
-            "Other",
-            "Parking",
-            "Rental",
-            "Taxi",
-            "Taxi",
-            "Uncategorized",
+            'Airline',
+            'Baggage',
+            'Car',
+            'Catering',
+            'Fee',
+            'Hangar Supplies',
+            'Hotel',
+            'Meal',
+            'Other',
+            'Parking',
+            'Rental',
+            'Taxi',
+            'Taxi',
+            'Uncategorized',
         ],
     },
     status: {
         type: String,
         required: true,
-        enum: ["pending", "complete", "submitted", "processed", "invoiced"],
+        enum: ['pending', 'complete', 'submitted', 'processed', 'invoiced'],
     },
     amount: {
         type: Number,
     },
-    trip: Schema.Types.ObjectId,
-    photos: [{ type: Schema.Types.ObjectId, ref: "Photo" }],
+    trip: mongoose_1.Schema.Types.ObjectId,
+    photos: [{ type: mongoose_1.Schema.Types.ObjectId, ref: 'Photo' }],
     tags: [String],
     note: String,
-}));
-exports.default = Expense;
+});
+const ExpenseModel = (0, mongoose_1.model)('Expense', schema);
+exports.default = ExpenseModel;

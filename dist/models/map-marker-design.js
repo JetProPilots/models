@@ -1,11 +1,7 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
-const Schema = mongoose_1.default.Schema;
-const MapMarkerDesign = mongoose_1.default.model("MapMarkerDesign", new Schema({
+const mongoose_1 = require("mongoose");
+const schema = new mongoose_1.Schema({
     active: {
         type: Boolean,
         required: true,
@@ -22,20 +18,20 @@ const MapMarkerDesign = mongoose_1.default.model("MapMarkerDesign", new Schema({
     icons: {
         pin: {
             type: String,
-            default: "https://www.jetpropilots.com/wp-content/uploads/2020/09/Map-Pin-Rev2-Small-c.png",
+            default: 'https://www.jetpropilots.com/wp-content/uploads/2020/09/Map-Pin-Rev2-Small-c.png',
         },
         card: {
             type: String,
-            default: "https://www.jetpropilots.com/wp-content/uploads/2016/10/MalePilotAvatar.png",
+            default: 'https://www.jetpropilots.com/wp-content/uploads/2016/10/MalePilotAvatar.png',
         },
     },
     contactLink: {
         type: String,
-        default: "https://www.jetpropilots.com/contact/",
+        default: 'https://www.jetpropilots.com/contact/',
     },
     buttonImageUrl: {
         type: String,
-        default: "https://www.jetpropilots.com/wp-content/uploads/2018/08/GetInfoButton.jpg",
+        default: 'https://www.jetpropilots.com/wp-content/uploads/2018/08/GetInfoButton.jpg',
     },
     width: {
         type: Number,
@@ -45,5 +41,6 @@ const MapMarkerDesign = mongoose_1.default.model("MapMarkerDesign", new Schema({
         type: Number,
         default: 300,
     },
-}));
-exports.default = MapMarkerDesign;
+});
+const MapMarkerDesignModel = (0, mongoose_1.model)('MapMarkerDesign', schema);
+exports.default = MapMarkerDesignModel;

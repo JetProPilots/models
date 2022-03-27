@@ -1,11 +1,7 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
-const Schema = mongoose_1.default.Schema;
-const Place = mongoose_1.default.model("Place", new Schema({
+const mongoose_1 = require("mongoose");
+const schema = new mongoose_1.Schema({
     city: {
         type: String,
         required: true,
@@ -21,7 +17,8 @@ const Place = mongoose_1.default.model("Place", new Schema({
     },
     location: {
         type: [Number],
-        index: "2dsphere",
     },
-}));
-exports.default = Place;
+});
+schema.path('location').index({ type: '2dsphere' });
+const PlaceModel = (0, mongoose_1.model)('Place', schema);
+exports.default = PlaceModel;

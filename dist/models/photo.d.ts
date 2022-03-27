@@ -1,3 +1,11 @@
-import mongoose from "mongoose";
-declare const Photo: mongoose.Model<any, {}, {}, {}>;
-export default Photo;
+/// <reference types="mongoose/types/pipelinestage" />
+/// <reference types="mongoose/types/connection" />
+/// <reference types="mongoose/types/cursor" />
+/// <reference types="mongoose/types/document" />
+/// <reference types="mongoose/types/error" />
+/// <reference types="mongoose/types/mongooseoptions" />
+/// <reference types="mongoose/types/schemaoptions" />
+/// <reference types="mongoose" />
+import { Photo } from '../interfaces/Photo';
+declare const PhotoModel: import("mongoose").Model<Photo, {}, {}, {}>;
+export default PhotoModel;

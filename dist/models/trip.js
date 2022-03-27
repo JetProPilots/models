@@ -1,11 +1,7 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
-const Schema = mongoose_1.default.Schema;
-const Trip = mongoose_1.default.model('Trip', new Schema({
+const mongoose_1 = require("mongoose");
+const schema = new mongoose_1.Schema({
     tripId: {
         type: String,
         required: false,
@@ -81,8 +77,8 @@ const Trip = mongoose_1.default.model('Trip', new Schema({
     travelDates: [Date],
     submissionDate: Date,
     reviewDate: Date,
-    expenses: [Schema.Types.ObjectId],
-    photos: [Schema.Types.ObjectId],
+    expenses: [mongoose_1.Schema.Types.ObjectId],
+    photos: [mongoose_1.Schema.Types.ObjectId],
     totalExpenses: Number,
     tripDayCount: Number,
     travelDayCount: Number,
@@ -95,5 +91,6 @@ const Trip = mongoose_1.default.model('Trip', new Schema({
     totalRateAmount: Number,
     grandTotal: Number,
     bGrandTotal: Number,
-}));
-exports.default = Trip;
+});
+const TripModel = (0, mongoose_1.model)('Trip', schema);
+exports.default = TripModel;

@@ -1,16 +1,14 @@
-import mongoose from "mongoose";
-const Schema = mongoose.Schema;
+import { model, Schema } from 'mongoose'
+import { Client } from '../interfaces/Client'
 
+const schema = new Schema<Client>({
+  name: {
+    type: String,
+    required: true,
+    uppercase: true,
+  },
+})
 // create the model for clients and expose it to our app
-const Client = mongoose.model(
-  "Client",
-  new Schema({
-    name: {
-      type: String,
-      required: true,
-      uppercase: true,
-    },
-  })
-);
+const ClientModel = model<Client>('Client', schema)
 
-export default Client;
+export default ClientModel
