@@ -1,6 +1,7 @@
 import { model, Schema } from 'mongoose'
+import { Trip, TRIP_STATUS, CLIENT_DEFAULT } from '../interfaces/trip'
 
-const schema = new Schema({
+const schema = new Schema<Trip>({
   tripId: {
     type: String,
     required: false,
@@ -15,7 +16,7 @@ const schema = new Schema({
     type: String,
     required: true,
     uppercase: true,
-    default: 'NONE',
+    default: CLIENT_DEFAULT,
   },
   user: {
     id: String,
@@ -55,7 +56,12 @@ const schema = new Schema({
   status: {
     type: String,
     required: true,
-    enum: ['open', 'submitted', 'processed', 'invoiced'],
+    enum: [
+      TRIP_STATUS.OPEN,
+      TRIP_STATUS.SUBMITTED,
+      TRIP_STATUS.PROCESSED,
+      TRIP_STATUS.INVOICED,
+    ],
   },
   rate: {
     type: Number,
@@ -95,6 +101,6 @@ const schema = new Schema({
   bGrandTotal: Number,
 })
 
-const TripModel = model('Trip', schema)
+const TripModel = model<Trip>('Trip', schema)
 
 export { TripModel }

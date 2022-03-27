@@ -1,5 +1,5 @@
 import { model, Schema } from 'mongoose'
-import { Expense } from '../interfaces/expense'
+import { Expense, EXPENSE_TYPES, EXPENSE_STATUS } from '../interfaces/expense'
 
 const schema = new Schema<Expense>({
   name: {
@@ -22,26 +22,31 @@ const schema = new Schema<Expense>({
     type: String,
     required: true,
     enum: [
-      'Airline',
-      'Baggage',
-      'Car',
-      'Catering',
-      'Fee',
-      'Hangar Supplies',
-      'Hotel',
-      'Meal',
-      'Other',
-      'Parking',
-      'Rental',
-      'Taxi',
-      'Taxi',
-      'Uncategorized',
+      EXPENSE_TYPES.AIRLINE,
+      EXPENSE_TYPES.BAGGAGE,
+      EXPENSE_TYPES.CAR,
+      EXPENSE_TYPES.CATERING,
+      EXPENSE_TYPES.FEE,
+      EXPENSE_TYPES.HANGAR_SUPPLIES,
+      EXPENSE_TYPES.HOTEL,
+      EXPENSE_TYPES.MEAL,
+      EXPENSE_TYPES.OTHER,
+      EXPENSE_TYPES.PARKING,
+      EXPENSE_TYPES.RENTAL,
+      EXPENSE_TYPES.TAXI,
+      EXPENSE_TYPES.UNCATEGORIZED,
     ],
   },
   status: {
     type: String,
     required: true,
-    enum: ['pending', 'complete', 'submitted', 'processed', 'invoiced'],
+    enum: [
+      EXPENSE_STATUS.PENDING,
+      EXPENSE_STATUS.COMPLETE,
+      EXPENSE_STATUS.SUBMITTED,
+      EXPENSE_STATUS.PROCESSED,
+      EXPENSE_STATUS.INVOICED,
+    ],
   },
   amount: {
     type: Number,

@@ -1,5 +1,13 @@
+import { CLIENT_DEFAULT } from './../interfaces/trip'
+import {
+  MEDICAL_CLASSES,
+  User,
+  USER_ROLES,
+  USER_TYPES,
+} from './../interfaces/user'
 import { model, Schema } from 'mongoose'
-const schema = new Schema({
+
+const schema = new Schema<User>({
   gid: {
     type: String,
   },
@@ -20,27 +28,26 @@ const schema = new Schema({
   role: {
     type: String,
     lowercase: true,
-    enum: ['pending', 'user', 'admin'],
-    default: 'user',
+    enum: [USER_ROLES.PENDING, USER_ROLES.USER, USER_ROLES.ADMIN],
   },
   type: {
     type: String,
     lowercase: true,
     enum: [
-      'admin',
-      'user',
-      'attendant',
-      'pending',
-      'pilot',
-      'tech',
-      'flight engineer',
+      USER_TYPES.ADMIN,
+      USER_TYPES.USER,
+      USER_TYPES.ATTENDANT,
+      USER_TYPES.PENDING,
+      USER_TYPES.PILOT,
+      USER_TYPES.TECH,
+      USER_TYPES.FLIGHT_ENGINEER,
     ],
   },
   client: {
     type: String,
     required: true,
     uppercase: true,
-    default: 'NONE',
+    default: CLIENT_DEFAULT,
   },
   lastLogin: Date,
   lastDevice: String,
@@ -54,7 +61,7 @@ const schema = new Schema({
   medicalDate: Date,
   medicalClass: {
     type: Number,
-    enum: [1, 2, 3],
+    enum: [MEDICAL_CLASSES.ONE, MEDICAL_CLASSES.TWO, MEDICAL_CLASSES.THREE],
   },
   hasLoggedIn: {
     type: Boolean,
@@ -80,7 +87,7 @@ const schema = new Schema({
     client: {
       type: String,
       uppercase: true,
-      default: 'NONE',
+      default: CLIENT_DEFAULT,
     },
   },
   employeeId: {
@@ -91,7 +98,7 @@ const schema = new Schema({
   },
   employee: Schema.Types.Mixed,
 })
-
-const UserModel = model('User', schema)
+schema.path('role').default(USER_ROLES.PENDING)
+const UserModel = model<User>('User', schema)
 
 export { UserModel }

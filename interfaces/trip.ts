@@ -1,3 +1,13 @@
+export type TripStatus = 'open' | 'submitted' | 'processed' | 'invoiced'
+
+export const CLIENT_DEFAULT = 'NONE'
+export const TRIP_STATUS = {
+  OPEN: 'open',
+  SUBMITTED: 'submitted',
+  PROCESSED: 'processed',
+  INVOICED: 'invoiced',
+}
+
 export interface Trip {
   tripId: string
   name: string
@@ -11,7 +21,7 @@ export interface Trip {
   itinerary: string[]
   startDate: Date
   endDate: Date
-  status: string
+  status: TripStatus
   rate: number
   travelRate: number
   travelBillRate: number

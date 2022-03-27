@@ -1,13 +1,46 @@
 import { Employee } from './employee'
 
+export type UserRole = 'pending' | 'user' | 'admin'
+
+export const USER_ROLES = {
+  PENDING: 'pending',
+  USER: 'user',
+  ADMIN: 'admin',
+}
+
+export type UserType =
+  | 'admin'
+  | 'user'
+  | 'attendant'
+  | 'pending'
+  | 'pilot'
+  | 'tech'
+  | 'flight engineer'
+
+export const USER_TYPES = {
+  ADMIN: 'admin',
+  USER: 'user',
+  ATTENDANT: 'attendant',
+  PENDING: 'pending',
+  PILOT: 'pilot',
+  TECH: 'tech',
+  FLIGHT_ENGINEER: 'flight engineer',
+}
+
+export type MedicalClass = 1 | 2 | 3
+export const MEDICAL_CLASSES = {
+  ONE: 1,
+  TWO: 2,
+  THREE: 3,
+}
 export interface User {
   gid: string
   token: string
   email: string
   name: string
   profile: object
-  role: string
-  type: string
+  role: UserRole
+  type: UserType
   client: string
   lastLogin: Date
   lastDevice: string
@@ -19,7 +52,7 @@ export interface User {
   travelRate: number
   travelBillRate: number
   medicalDate: Date
-  medicalClass: number
+  medicalClass: MedicalClass
   hasLoggedIn: boolean
   payStubs: object[]
   defaults: {
