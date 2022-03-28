@@ -1,4 +1,5 @@
 export * from './aircraft'
+export * from './airport'
 export * from './category'
 export * from './client'
 export * from './expense'
