@@ -31,7 +31,7 @@ export interface ClientInfo {
   trip_number: string
 }
 
-export interface Aircraft {
+export interface CrewRequestAircraft {
   name: string
   serial_number: string
   avionics: string
@@ -53,7 +53,7 @@ export interface TripLeg {
 export interface CrewRequest {
   legs: TripLeg[]
   client: ClientInfo
-  aircraft: Aircraft
+  aircraft: CrewRequestAircraft
   crew_needed: CrewNeeded
   itinerary_international: boolean
   additional_notes: string

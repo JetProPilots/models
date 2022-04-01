@@ -1,4 +1,3 @@
-import { TripLeg } from './../interfaces/crew-request'
 import { Schema, model } from 'mongoose'
 import { CrewRequest } from '../interfaces/crew-request'
 
@@ -25,7 +24,7 @@ const schema = new Schema<CrewRequest>({
   assigned: {
     required: false,
   },
-  version: {
+  revision: {
     required: true,
     default: 1,
   },
