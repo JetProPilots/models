@@ -1,3 +1,3 @@
-git a
-npm run deploy
+git a &&\
+npm run deploy &&\
 git push

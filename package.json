@@ -1,9 +1,9 @@
 {
   "name": "@jetpropilots/models",
-  "version": "12.0.6",
+  "version": "12.0.7",
   "description": "mongoose models for jetpro apps",
   "scripts": {
-    "preversion": "git add *",
+    "preversion": "git a",
     "predeploy": "npm version patch --force",
     "deploy": "npm publish"
   },
@@ -14,9 +14,12 @@
     "mongoose": "^6.2.7"
   },
   "devDependencies": {
+    "ts-node": "^10.7.0",
     "typescript": "^4.6.2"
   },
   "files": [
-    "**/*.ts"
+    "index.ts",
+    "models/*.ts",
+    "interfaces/*.ts"
   ]
 }
