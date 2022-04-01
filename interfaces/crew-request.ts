@@ -58,5 +58,5 @@ export interface CrewRequest {
   itinerary_international: boolean
   additional_notes: string
   assigned: AssignedEmployee[]
-  version: number
+  revision: number
 }
