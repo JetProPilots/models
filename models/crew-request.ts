@@ -32,6 +32,7 @@ const schema = new Schema<CrewRequest>({
     type: [],
   },
   revision: {
+    type: Number,
     required: true,
     default: 1,
   },
