@@ -31,7 +31,7 @@ const schema = new Schema<Photo>({
     type: Schema.Types.ObjectId,
   },
 })
-schema.virtual('id').get((x: { _id: Schema.Types.ObjectId }) => `${x._id}`)
+
 schema.path('location').index({ type: '2dsphere' })
 schema.path('location').default([0, 0])
 const PhotoModel = model<Photo>('Photo', schema)

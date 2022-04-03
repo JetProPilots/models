@@ -16,7 +16,5 @@ const schema = new Schema<Aircraft>({
   },
 })
 
-schema.virtual('id').get((x: { _id: Schema.Types.ObjectId }) => `${x._id}`)
-
 const AircraftModel = model<Aircraft>('Aircraft', schema)
 export { AircraftModel }

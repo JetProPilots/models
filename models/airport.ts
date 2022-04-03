@@ -32,6 +32,6 @@ const schema = new Schema<Airport>({
     type: String,
   },
 })
-schema.virtual('id').get((x: { _id: Schema.Types.ObjectId }) => `${x._id}`)
+
 const AirportModel = model<Airport>('Airport', schema)
 export { AirportModel }

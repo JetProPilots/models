@@ -45,7 +45,7 @@ const schema = new Schema<MapMarkerDesign>({
     default: 300,
   },
 })
-schema.virtual('id').get((x: { _id: Schema.Types.ObjectId }) => `${x._id}`)
+
 const MapMarkerDesignModel = model<MapMarkerDesign>('MapMarkerDesign', schema)
 
 export { MapMarkerDesignModel }

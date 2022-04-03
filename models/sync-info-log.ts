@@ -9,7 +9,7 @@ const schema = new Schema<SyncInfoLog>({
 })
 
 schema.index({ syncId: 1 })
-schema.virtual('id').get((x: { _id: Schema.Types.ObjectId }) => `${x._id}`)
+
 const SyncInfoLogModel = model<SyncInfoLog>('SyncInfoLog', schema)
 
 export { SyncInfoLogModel }

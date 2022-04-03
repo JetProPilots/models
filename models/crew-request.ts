@@ -37,6 +37,6 @@ const schema = new Schema<CrewRequest>({
     default: 1,
   },
 })
-schema.virtual('id').get((x: { _id: Schema.Types.ObjectId }) => `${x._id}`)
+
 const CrewRequestModel = model<CrewRequest>('CrewRequest', schema)
 export { CrewRequestModel }

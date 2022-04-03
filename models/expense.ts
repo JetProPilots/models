@@ -56,7 +56,7 @@ const schema = new Schema<Expense>({
   tags: [String],
   note: String,
 })
-schema.virtual('id').get((x: { _id: Schema.Types.ObjectId }) => `${x._id}`)
+
 const ExpenseModel = model<Expense>('Expense', schema)
 
 export { ExpenseModel }

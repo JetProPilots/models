@@ -1,6 +1,6 @@
 {
   "name": "@jetpropilots/models",
-  "version": "12.1.2",
+  "version": "12.2.0",
   "description": "mongoose models for jetpro apps",
   "scripts": {
     "preversion": "git a",

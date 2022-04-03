@@ -9,7 +9,7 @@ const schema = new Schema<SyncErrorLog>({
   meta: { type: Schema.Types.Mixed },
 })
 schema.index({ syncId: 1 })
-schema.virtual('id').get((x: { _id: Schema.Types.ObjectId }) => `${x._id}`)
+
 const SyncErrorLogModel = model<SyncErrorLog>('SyncErrorLog', schema)
 
 export { SyncErrorLogModel }

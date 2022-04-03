@@ -100,7 +100,6 @@ const schema = new Schema<Trip>({
   grandTotal: Number,
   bGrandTotal: Number,
 })
-schema.virtual('id').get((x: { _id: Schema.Types.ObjectId }) => `${x._id}`)
 
 const TripModel = model<Trip>('Trip', schema)
 
