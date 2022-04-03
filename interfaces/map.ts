@@ -1,4 +1,6 @@
-export interface Map {
+import { IHaveId } from './i-have-id'
+
+export interface Map extends IHaveId {
   useForMarkers: boolean
   id: string
   map_title: string
