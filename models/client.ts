@@ -8,6 +8,7 @@ const schema = new Schema<Client>({
     uppercase: true,
   },
 })
+schema.virtual('id').get((x: { _id: Schema.Types.ObjectId }) => `${x._id}`)
 // create the model for clients and expose it to our app
 const ClientModel = model<Client>('Client', schema)
 

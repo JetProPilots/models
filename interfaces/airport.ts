@@ -1,4 +1,6 @@
-export interface Airport {
+import { IHaveId } from './i-have-id'
+
+export interface Airport extends IHaveId {
   name: string
   city: string
   country: string

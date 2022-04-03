@@ -38,7 +38,7 @@ const schema = new Schema<Category>({
     type: String,
   },
 })
-
+schema.virtual('id').get((x: { _id: Schema.Types.ObjectId }) => `${x._id}`)
 const CategoryModel = model<Category>('Category', schema)
 
 export { CategoryModel }

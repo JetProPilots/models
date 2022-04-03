@@ -1,6 +1,7 @@
 import { Schema } from 'mongoose'
+import { IHaveId } from './i-have-id'
 
-export interface Photo {
+export interface Photo extends IHaveId {
   name: string
   contentType: string
   data: string

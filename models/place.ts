@@ -21,7 +21,7 @@ const schema = new Schema<Place>({
 })
 
 schema.path('location').index({ type: '2dsphere' })
-
+schema.virtual('id').get((x: { _id: Schema.Types.ObjectId }) => `${x._id}`)
 const PlaceModel = model<Place>('Place', schema)
 
 export { PlaceModel }

@@ -42,7 +42,7 @@ const schema = new Schema<Map>({
   default_to: String,
   other_settings: String,
 })
-
+schema.virtual('id').get((x: { _id: Schema.Types.ObjectId }) => `${x._id}`)
 const MapModel = model<Map>('Map', schema)
 
 export { MapModel }

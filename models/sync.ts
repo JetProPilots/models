@@ -28,6 +28,7 @@ const schema = new Schema<Sync>({
   resumed: { type: [Date], default: [] },
   execution: { type: String },
 })
+schema.virtual('id').get((x: { _id: Schema.Types.ObjectId }) => `${x._id}`)
 
 const SyncModel = model<Sync>('Sync', schema)
 

@@ -1,9 +1,10 @@
-export interface Category {
+import { IHaveId } from './i-have-id'
+
+export interface Category extends IHaveId {
   icon: {
     url: string
     retina: boolean
   }
-  id: string
   map_id: string
   active: string
   category_name: string

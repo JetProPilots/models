@@ -116,6 +116,8 @@ const schema = new Schema<User>({
   },
   employee: Schema.Types.Mixed,
 })
+schema.virtual('id').get((x: { _id: Schema.Types.ObjectId }) => `${x._id}`)
+
 schema.path('role').default(USER_ROLES.PENDING)
 const UserModel = model<User>('User', schema)
 

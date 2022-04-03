@@ -1,3 +1,5 @@
+import { IHaveId } from './i-have-id'
+
 export interface EmployeeNote {
   timestamp: Date
   note: string
@@ -50,7 +52,7 @@ export interface TripLeg {
   end: LegPhase
 }
 
-export interface CrewRequest {
+export interface CrewRequest extends IHaveId {
   legs: TripLeg[]
   client: ClientInfo
   aircraft: CrewRequestAircraft

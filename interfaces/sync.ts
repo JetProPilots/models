@@ -1,4 +1,6 @@
-export interface Sync {
+import { IHaveId } from './i-have-id'
+
+export interface Sync extends IHaveId {
   status: string
   progress: string
   task: number

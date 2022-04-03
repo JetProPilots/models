@@ -1,4 +1,5 @@
 import { Employee } from './employee'
+import { IHaveId } from './i-have-id'
 
 export type UserRole = 'pending' | 'user' | 'admin'
 
@@ -33,7 +34,7 @@ export const MEDICAL_CLASSES = {
   TWO: 2,
   THREE: 3,
 }
-export interface User {
+export interface User extends IHaveId {
   email: string
   password: {
     hash: string

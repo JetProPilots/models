@@ -1,3 +1,5 @@
+import { IHaveId } from './i-have-id'
+
 export type ExpenseTypes =
   | 'Airline'
   | 'Baggage'
@@ -44,7 +46,7 @@ export const EXPENSE_STATUS = {
   INVOICED: 'invoiced',
 }
 
-export interface Expense {
+export interface Expense extends IHaveId {
   name: string
   user: {
     id: string

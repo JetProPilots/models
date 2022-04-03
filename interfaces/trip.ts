@@ -1,3 +1,5 @@
+import { IHaveId } from './i-have-id'
+
 export type TripStatus = 'open' | 'submitted' | 'processed' | 'invoiced'
 
 export const CLIENT_DEFAULT = 'NONE'
@@ -8,7 +10,7 @@ export const TRIP_STATUS = {
   INVOICED: 'invoiced',
 }
 
-export interface Trip {
+export interface Trip extends IHaveId {
   tripId: string
   name: string
   client: string
