@@ -34,9 +34,15 @@ export const MEDICAL_CLASSES = {
   THREE: 3,
 }
 export interface User {
+  email: string
+  password: {
+    hash: string
+    expires?: number
+    reset_pin?: string
+    reset_pin_expires?: number
+  }
   gid: string
   token: string
-  email: string
   name: string
   profile: object
   role: UserRole

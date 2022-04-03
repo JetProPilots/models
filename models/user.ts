@@ -8,15 +8,33 @@ import {
 import { model, Schema } from 'mongoose'
 
 const schema = new Schema<User>({
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
+    hash: {
+      type: String,
+      required: true,
+    },
+    expires: {
+      type: Number,
+      required: false,
+    },
+    reset_pin: {
+      type: String,
+      required: false,
+    },
+    reset_pin_expires: {
+      type: Number,
+      required: false,
+    },
+  },
   gid: {
     type: String,
   },
   token: {
     type: String,
-  },
-  email: {
-    type: String,
-    required: true,
   },
   name: {
     type: String,
